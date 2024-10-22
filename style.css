@@ -1,0 +1,175 @@
+:root {
+
+ /* colours */
+--marine: #3d5f90;
+--pale: #f9f9ff;
+--lightblue: #d5e3ff;
+--maroon: #6e5676;
+--rust: #ba1a1a;
+--grey: #616569;
+--steelblue: #004159;
+ 
+    /* fonts */
+ --sans: 'Julius Sans One', sans-serif; 
+ --archivo: 'Archivo Narrow', sans-serif;
+
+ /* font scale */
+ --base-size: 1.2rem;
+ --scale: 1.25;
+ 
+ --h6: calc(var(--base-size));
+ --h5: calc(var(--h6) * var(--scale));
+ --h4: calc(var(--h5) * var(--scale));
+ --h3: calc(var(--h4) * var(--scale));
+ --h2: calc(var(--h3) * var(--scale));
+ --h1: calc(var(--h2) * var(--scale));
+ --lg: calc(var(--h1) * var(--scale));
+ --xl: calc(var(--h1) * var(--scale) * var(--scale));
+ --small: calc(var(--base-size) / var(--scale));
+
+}
+
+ /* add border box sizing to the page */
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: var(--archivo);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  ul {
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    margin: 0 auto; 
+  }
+  .even-columns {
+    display: flex;
+    flex-direction: column;
+  }
+  .even-columns > * {
+    width: 100%;
+  }
+
+  section {
+    padding: 2em;
+  }
+  .profile {
+    background: #3d5f90;
+  }
+  h1 {
+    font-family: var(--sans);
+    font-size: var(--h3);
+    color: var(--pale);
+  }
+  .profile h2,
+  .work-experience-two {
+    color: var(--pale);
+    letter-spacing: .5px;
+    font-weight: lighter;
+  }
+  .profile p,
+  .work-experience-two {
+    color: var(--pale);
+    letter-spacing: .5px;
+  }
+
+  .work-experience {
+    background: var(--lightblue);
+    color: var(--grey);
+    letter-spacing: .5px;
+  }
+  .work-experience h2 {
+    color: var(--grey);
+    letter-spacing: .5px;
+    font-weight: lighter;
+  }
+  .work-experience h3 {
+    margin-bottom: 5px;
+    color: var(--grey);
+  }
+  .fa-regular {
+    margin-right: 5px;
+  }
+
+  .work-experience-two {
+    background: var(--maroon);
+  }
+  .work-experience-two h2 {
+    letter-spacing: .5px;
+    font-weight: lighter; 
+  }
+  
+  .education {
+    background: var(--steelblue);
+    color: var(--pale);
+  }
+  .education h2 {
+    letter-spacing: .5px;
+    font-weight: lighter; 
+  }
+  .education h3 {
+    margin-bottom: 5px;
+  }
+
+  footer { 
+    padding-top: 12rem; 
+    text-align: center;
+    
+  }
+
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    
+  }
+  .fa-solid,
+  .fa-brands {
+    font-size: var(--h6);
+    margin-right: 5px;
+  }
+
+  .link {
+    color: var(--pale); 
+  }
+  .link:hover {
+    color: aquamarine;
+  }
+
+  @media screen and (min-width: 850px)  {
+      .even-columns {
+        flex-direction: row;
+      }
+      .education {
+        order: -3;
+      }
+      h1 {
+        font-size: var(--h1);
+      }
+    }
+  
+  
+  
+
