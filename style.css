@@ -160,6 +160,10 @@ html {
   a[href^=tel] {
     color: var(--pale);
   }
+  a[href^=tel]:hover {
+    color: aquamarine;
+  }
+
 
   @media screen and (min-width: 850px)  {
       .even-columns {
