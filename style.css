@@ -157,6 +157,9 @@ html {
   .link:hover {
     color: aquamarine;
   }
+  a[href^=tel] {
+    color: var(--pale);
+  }
 
   @media screen and (min-width: 850px)  {
       .even-columns {
